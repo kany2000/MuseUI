@@ -6,6 +6,8 @@ MuseUI is a browser-only AI interface and image design generator. It helps you c
 
 The app is a static Vite + React SPA. It has no backend, no authentication, and no server database. Users provide their own AI API keys in the browser settings, and those keys are stored locally in the browser.
 
+![MuseUI showcase](./docs/show-case.png)
+
 ## Features
 
 - Text-to-image UI mockup generation
