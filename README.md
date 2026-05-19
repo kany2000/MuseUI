@@ -14,6 +14,12 @@ The app is a static Vite + React SPA. It has no backend, no authentication, and 
 - Local IndexedDB project and history storage
 - Bilingual UI: English and Chinese
 
+## Non-goals
+
+- MuseUI does not provide hosted AI APIs, bundled API keys, or a backend proxy.
+- MuseUI does not upload projects, generated images, or API settings to a MuseUI server.
+- MuseUI is not affiliated with, endorsed by, or sponsored by any AI provider or brand referenced in design templates.
+
 ## Privacy Model
 
 - API keys are stored in browser localStorage.
@@ -52,7 +58,13 @@ Recommended official endpoints:
 - OpenAI text: `https://api.openai.com/v1/chat/completions`
 - OpenAI image: `https://api.openai.com/v1/images/generations`
 
-You can also copy `.env.example` to `.env` if you want to keep local notes for development, but the production app is designed to be configured through the browser UI.
+The app is designed to be configured through the browser UI. `.env.example` is intentionally only a local notes file; no API key is required at build time.
+
+## Brand and Template Notice
+
+Some design templates mention third-party brand names or visual systems as style references. These references are descriptive only. MuseUI is not affiliated with those brands, and users are responsible for ensuring that generated outputs comply with applicable trademark, copyright, platform, and usage rules.
+
+See [NOTICE.md](./NOTICE.md) for additional third-party reference notes.
 
 ## Scripts
 
@@ -73,4 +85,4 @@ Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
-MIT
+MIT. See [LICENSE](./LICENSE).

@@ -2,7 +2,15 @@
 
 ## Reporting a Vulnerability
 
-Please report security issues privately to the project maintainers. Do not open a public issue containing credentials, exploit details, or private user data.
+Please report security issues privately through GitHub Security Advisories for this repository:
+
+https://github.com/Leochens/MuseUI/security/advisories/new
+
+Do not open a public issue containing credentials, exploit details, or private user data. If GitHub private vulnerability reporting is unavailable, contact the repository owner privately through their GitHub profile and include a minimal description of the affected area.
+
+## Supported Versions
+
+MuseUI is early-stage open-source software. Security fixes are handled on the default branch first, then released from tagged versions when available.
 
 ## Credential Handling
 

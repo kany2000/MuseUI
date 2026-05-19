@@ -1,8 +1,28 @@
 {
   "name": "muse-ui",
   "version": "1.0.0",
+  "description": "Browser-only AI interface and image design generator for UI mockups, social graphics, covers, infographics, logos, stickers, and visual drafts.",
   "license": "MIT",
   "type": "module",
+  "author": "MuseUI contributors",
+  "homepage": "https://github.com/Leochens/MuseUI#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leochens/MuseUI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Leochens/MuseUI/issues"
+  },
+  "keywords": [
+    "ai",
+    "design",
+    "image-generation",
+    "ui-generator",
+    "vite",
+    "react",
+    "gemini",
+    "openai-compatible"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

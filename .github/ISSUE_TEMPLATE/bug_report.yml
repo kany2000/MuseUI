@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible problem in MuseUI
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve MuseUI. Please do not include API keys, tokens, private prompts, or private generated images.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest steps that reproduce the issue.
+      placeholder: |
+        1. Open...
+        2. Configure...
+        3. Click...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: provider
+    attributes:
+      label: AI provider
+      options:
+        - Not related to AI generation
+        - Gemini
+        - OpenAI-compatible text endpoint
+        - OpenAI-compatible image endpoint
+        - Other
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and OS
+      placeholder: Chrome 125 on macOS 15
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output
+      description: Paste relevant errors only. Redact secrets and private URLs.
+      render: shell
