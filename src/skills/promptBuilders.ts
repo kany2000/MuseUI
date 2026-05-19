@@ -4,6 +4,8 @@ import {
   LogoConfig, StickerDesignConfig, SkillType
 } from '../types';
 
+import { buildWordVisualizerPrompt } from './word-visualizer';
+
 // Placeholder imports - will be resolved once constants are migrated
 // import { COVER_TYPES, COVER_PALETTES, COVER_RENDERINGS, COVER_TEXTS, COVER_MOODS, COVER_FONTS } from './cover-image/constants';
 // import { INFOGRAPHIC_LAYOUTS, INFOGRAPHIC_STYLES } from './infographic/constants';
@@ -497,6 +499,9 @@ export function buildSkillPrompt(
       return buildLogoPrompt(content, config.logo, constants.logo!);
     case 'sticker-design':
       return buildStickerDesignPrompt(content, config.stickerDesign, constants.stickerDesign!);
+    case 'word-visualizer':
+      // Word visualizer uses config.word directly as the content
+      return buildWordVisualizerPrompt(config.wordVisualizer || { word: content, language: 'auto', mode: 'no-ground', allowExtraText: true });
     default:
       throw new Error(`Unknown skill type: ${skillType}`);
   }

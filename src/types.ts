@@ -2,13 +2,13 @@
 export type PlatformType = 'mobile' | 'pc' | 'tablet' | 'browser';
 export type LangType = 'en' | 'zh';
 export type StudioType = 'ui-designer' | 'media-studio' | 'game-studio';
-export type CreatorRole = 'designer' | 'media' | 'game' | 'cover-image' | 'infographic' | 'xhs-images' | 'comic' | 'article-illustrator' | 'slide-deck' | 'logo' | 'sticker-design' | 'free';
+export type CreatorRole = 'designer' | 'media' | 'game' | 'cover-image' | 'infographic' | 'xhs-images' | 'comic' | 'article-illustrator' | 'slide-deck' | 'logo' | 'sticker-design' | 'word-visualizer' | 'free';
 
 // ==========================================
 // SKILL SYSTEM
 // ==========================================
 
-export type SkillType = 'cover-image' | 'infographic' | 'xhs-images' | 'comic' | 'article-illustrator' | 'slide-deck' | 'logo' | 'sticker-design';
+export type SkillType = 'cover-image' | 'infographic' | 'xhs-images' | 'comic' | 'article-illustrator' | 'slide-deck' | 'logo' | 'sticker-design' | 'word-visualizer';
 
 export interface SkillOption {
   id: string;
@@ -148,6 +148,19 @@ export interface StickerDesignConfig {
   aspect: MediaAspectRatio;
 }
 
+// --- Word Visualizer ---
+export type VisualizerMode = 'no-ground' | 'with-ground';
+
+export interface WordVisualizerConfig {
+  word: string;
+  language: 'auto' | 'zh' | 'en';
+  context?: string;
+  mood?: string;
+  forbidden?: string;
+  mode: VisualizerMode;
+  allowExtraText: boolean;
+}
+
 // --- Unified Skill Config ---
 export interface SkillConfig {
   type: SkillType;
@@ -159,6 +172,7 @@ export interface SkillConfig {
   slideDeck?: SlideDeckConfig;
   logo?: LogoConfig;
   stickerDesign?: StickerDesignConfig;
+  wordVisualizer?: WordVisualizerConfig;
 }
 
 export type MediaAspectRatio = '1:1' | '3:4' | '4:3' | '9:16' | '16:9' | '2:3' | '3:2';
